@@ -6,3 +6,4 @@ console.log('TEST: link index.html and script.js');
 if (navigator && navigator.serviceWorker) {
   navigator.serviceWorker.register('../sw.js');
 }
+

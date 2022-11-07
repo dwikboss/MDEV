@@ -1,9 +1,9 @@
 {
-  "short_name": "Weather",
-  "name": "Weather App",
-  "start_url": "/index.html",
-  "background_color": "#3367D6",
+  "short_name": "Spirit App",
+  "name": "Spirit Festival",
+  "start_url": ".",
+  "background_color": "#ececec",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3367D6"
+  "theme_color": "#ececec"
 }

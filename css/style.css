@@ -23,6 +23,7 @@ ul {
     --app-green: #92d17e;
     --app-orange: #e9a842;
     --app-yellow: #e3d783;
+	--item-pink: #d76870;
 }
 
 html {
@@ -80,14 +81,14 @@ header {
 }
 
 /* title */
-.title__background {
+#title__background {
     margin-top: -94px;
     color: rgba(0, 0, 0, 0.15);
     font-family: 'Poppins-Bold';
     font-size: 13rem;
 }
 
-.title__foreground {
+#title__foreground {
     color: rgba(0, 0, 0);
     font-family: 'Poppins-ExtraBold';
     font-size: 6rem;
@@ -95,7 +96,7 @@ header {
 }
 
 /* show */
-.show-content {
+.show-content, .news-content {
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
@@ -137,7 +138,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 4px;
+	margin-top: 7px;
 }
 
 .show__date__month {
@@ -160,6 +161,36 @@ header {
 .show__info__title {
     font-family: 'Poppins-Bold';
 	color: white;
+	font-size: 1.6rem;
+}
+
+/* news */
+.news {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	color: white;
+    background-color: var(--item-pink);
+    padding: 1.2em;
+	font-size: 1.6rem;	
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+	border-radius: 16px;
+}
+
+.news__date {
+    font-family: 'Poppins-Light';
+	font-size: 1rem;
+}
+
+.news__excerpt {
+    font-family: 'Poppins-Regular';
+	font-size: 1rem;
+}
+
+.news__title {
+    font-family: 'Poppins-Bold';
 	font-size: 1.8rem;
 }
 
@@ -179,7 +210,7 @@ nav {
 }
 
 nav i {
-	font-size: 2.6rem;
+	font-size: 1.8rem;
 }
 
 /* TABLET - (Styling exceptions for tablet and larger) */
