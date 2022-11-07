@@ -70,18 +70,18 @@ body {
 
 /* header */
 header {
-	min-height: 20rem;
-	text-align: center;
-	overflow: hidden;    
-	display: flex;
+    min-height: 18rem;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
-	align-items: center;
-	flex-direction: column;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* title */
 .title__background {
-	margin-top: -114px;
+    margin-top: -94px;
     color: rgba(0, 0, 0, 0.15);
     font-family: 'Poppins-Bold';
     font-size: 13rem;
@@ -95,34 +95,91 @@ header {
 }
 
 /* show */
+.show-content {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
 .show {
-	padding: 2em;
+	padding: 1.6em 1em 1.6em 1em;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     color: white;
-	border-radius: 10px;
+	border-radius: 16px;
+	gap: 25px;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
 }
 
 .show--red {
 	background-color: var(--app-red);
 }
 
+.show--blue {
+	background-color: var(--app-blue);
+}
+
+.show--green {
+	background-color: var(--app-green);
+}
+
+.show--orange {
+	background-color: var(--app-orange);
+}
+
+.show--yellow {
+	background-color: var(--app-yellow);
+}
+
 .show__date {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 4px;
 }
 
 .show__date__month {
     font-family: 'Poppins-Light';
-	font-size: 2rem;
+	font-size: 1.4rem;
+	margin-top: -4px;
 }
 
 .show__date__day {
     font-family: 'Poppins-Regular';
-	font-size: 4.5rem;
-	margin-top: -15px;
+	font-size: 3.2rem;
+	margin-top: -10px;
+}
+
+.show__info__title, .show__info__time, .show__info__location {
+    font-family: 'Poppins-regular';
+	font-size: 1.2rem;
+}
+
+.show__info__title {
+    font-family: 'Poppins-Bold';
+	color: white;
+	font-size: 1.8rem;
+}
+
+/* navigation */
+.nav-section {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-inline: auto;
+    width: min(87%);
+    padding-bottom: 2em;
+}
+
+nav i {
+	font-size: 2.6rem;
 }
 
 /* TABLET - (Styling exceptions for tablet and larger) */
