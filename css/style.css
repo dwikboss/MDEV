@@ -82,17 +82,17 @@ header {
 
 /* title */
 #title__background {
-    margin-top: -94px;
+    margin-top: -110px;
     color: rgba(0, 0, 0, 0.15);
     font-family: 'Poppins-Bold';
-    font-size: 13rem;
+    font-size: 11em;
 }
 
 #title__foreground {
     color: rgba(0, 0, 0);
     font-family: 'Poppins-ExtraBold';
-    font-size: 6rem;
-	margin-top: -95px;
+    font-size: 4.8em;
+    margin-top: -80px;
 }
 
 /* show */
@@ -211,6 +211,10 @@ nav {
 
 nav i {
 	font-size: 1.8rem;
+}
+
+.active {
+	color: var(--app-red);
 }
 
 /* TABLET - (Styling exceptions for tablet and larger) */
