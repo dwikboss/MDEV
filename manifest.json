@@ -1,11 +1,11 @@
 {
-	"short_name": "Spirit App",
-	"name": "Spirit Festival",
+	"short_name": "Spirit",
+	"name": "Spirit Flights",
 	"start_url": ".",
-	"background_color": "#ececec",
+	"background_color": "#826aed",
 	"display": "standalone",
 	"scope": ".",
-	"theme_color": "#ececec",
+	"theme_color": "#826aed",
 	"icons": [
 		{
 			"src": "icon/icon-48.png",
