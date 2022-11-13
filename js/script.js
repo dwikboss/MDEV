@@ -5,23 +5,23 @@ console.log('TEST: link index.html and script.js');
 
 // nav
 var nav_news = document.getElementById("nav_news");
-var nav_music = document.getElementById("nav_music");
-var nav_map = document.getElementById("nav_map");
+var nav_flights = document.getElementById("nav_flights");
+var nav_contact = document.getElementById("nav_contact");
 
-var news_section = document.getElementById("news_section");
-var show_section = document.getElementById("show_section");
+var section_news = document.getElementById("section_news");
+var section_flights = document.getElementById("section_flights");
 
 nav_news.addEventListener("click", handleNav);
-nav_music.addEventListener("click", handleNav);
-nav_map.addEventListener("click", handleNav);
+nav_flights.addEventListener("click", handleNav);
+nav_contact.addEventListener("click", handleNav);
 
 function handleNav() {
 	if (this.id == "nav_news") {
-		news_section.style.display = "flex";
-		show_section.style.display = "none";
-	} else if (this.id == "nav_music") {
-		news_section.style.display = "none";
-		show_section.style.display = "flex";
+		section_news.style.display = "flex";
+		section_flights.style.display = "none";
+	} else if (this.id == "nav_flights") {
+		section_news.style.display = "none";
+		section_flights.style.display = "flex";
 	} else {
 		console.log("333");
 	}
