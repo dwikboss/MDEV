@@ -3,15 +3,17 @@
 
 console.log('TEST: link index.html and script.js');
 
-var title = document.getElementById("title");
+let title = document.getElementById("title");
 
-var nav_news = document.getElementById("nav_news");
-var nav_flights = document.getElementById("nav_flights");
-var nav_map = document.getElementById("nav_map");
+let nav_news = document.getElementById("nav_news");
+let nav_flights = document.getElementById("nav_flights");
+let nav_map = document.getElementById("nav_map");
 
-var section_news = document.getElementById("section_news");
-var section_flights = document.getElementById("section_flights");
-var section_map = document.getElementById("section_map");
+let section_news = document.getElementById("section_news");
+let section_flights = document.getElementById("section_flights");
+let section_map = document.getElementById("section_map");
+
+let apikey = "8d8172502a2569a7360a64e94889071f";
 
 nav_news.addEventListener("click", handleNav);
 nav_flights.addEventListener("click", handleNav);
@@ -54,14 +56,12 @@ if ("serviceWorker" in navigator) {
 }
 
 if ("geolocation" in navigator) {
-	navigator.geolocation.watchPosition((position) => {
-		console.log(position.coords.latitude, position.coords.longitude);
+	navigator.geolocation.getCurrentPosition((position) => {
+		let lat = position.coords.latitude;
+		let long = position.coords.longitude;
 
-		var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
-
-		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}).addTo(map);
+		fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}`)
+		.then(response => response.json())
+		.then(data => console.log(data));
 	});
 }
