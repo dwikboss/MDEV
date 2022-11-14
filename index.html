@@ -10,10 +10,12 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icon/icon-192.png">
     <script src="js/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
   </head>
   <body>
     <header>
@@ -25,7 +27,7 @@
     
     <main>
         <div class="container main-content">
-            <div id="section_news" class="news-content" style="display: none;">
+            <div id="section_news" class="news-content" style="display: flex;">
                 <article class="news">
                     <p class="news__date">07/11/2022</p>
                     <h2 class="news__title">EHBO locaties aangepast</h2>
@@ -43,7 +45,7 @@
                 </article>
             </div>
 
-            <div id="section_flights" class="flights-content" style="display: flex;">
+            <div id="section_flights" class="flights-content" style="display: none;">
                 <div id="card_1" class="card">
                     <div class="border-left"></div>
                     <div class="card-content-wrapper">
@@ -99,7 +101,7 @@
                                     <p class="label">gate</p>
                                     <p class="boarding-info big">C1</p>
                                 </div>
-                                <div id="card_1_upgrade" class="btn-upgrade">upgrade</div>
+                                <div id="card_1_share" class="btn-share">share</div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +163,7 @@
                                     <p class="label">gate</p>
                                     <p class="boarding-info big">A2</p>
                                 </div>
-                                <div class="btn-upgrade">upgrade</div>
+                                <div id="card_2_share" class="btn-share">share</div>
                             </div>
                         </div>
                     </div>
@@ -222,11 +224,15 @@
                                     <p class="label">gate</p>
                                     <p class="boarding-info big">B2</p>
                                 </div>
-                                <div class="btn-upgrade">upgrade</div>
+                                <div id="card_3_share" class="btn-share">share</div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div id="section_map" class="map-content" style="display: none;">
+                <div id="map"></div>
             </div>
         </div>
     </main>
@@ -235,8 +241,8 @@
         <nav>
             <div class="nav-inner">
                 <i id="nav_news" class="bi bi-lightbulb-fill"></i>
-                <i id="nav_flights" class="bi bi-airplane-fill"></i>
-                <i id="nav_contact" class="bi bi-telephone-fill"></i>
+                <i id="nav_flights" class="bi bi-ticket-fill"></i>
+                <i id="nav_map" class="bi bi-airplane-fill"></i>
             </div>
         </nav>
     </div>
@@ -248,7 +254,6 @@
         $content_id = "#" + $content;
 
         $($content_id).slideToggle("500");
-        console.log($content_id);
     });
 </script>
 </html>

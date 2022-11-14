@@ -3,27 +3,25 @@
 
 console.log('TEST: link index.html and script.js');
 
-
 var title = document.getElementById("title");
 
 var nav_news = document.getElementById("nav_news");
 var nav_flights = document.getElementById("nav_flights");
-var nav_contact = document.getElementById("nav_contact");
-
-var upgrade_1 = document.getElementById("card_1_upgrade");
-var card_2 = document.getElementById("card_2");
-var card_3 = document.getElementById("card_3");
+var nav_map = document.getElementById("nav_map");
 
 var section_news = document.getElementById("section_news");
 var section_flights = document.getElementById("section_flights");
+var section_map = document.getElementById("section_map");
 
 nav_news.addEventListener("click", handleNav);
 nav_flights.addEventListener("click", handleNav);
-nav_contact.addEventListener("click", handleNav);
+nav_map.addEventListener("click", handleNav);
 
-upgrade_1.addEventListener("click", handleUpgrade);
+document.querySelectorAll(".btn-share").forEach(btn_share => 
+	btn_share.addEventListener("click", handleShare)
+)
 
-function handleUpgrade() {
+function handleShare() {
 	console.log(this.id);
 }
 
@@ -31,13 +29,19 @@ function handleNav() {
 	if (this.id == "nav_news") {
 		section_news.style.display = "flex";
 		section_flights.style.display = "none";
+		section_map.style.display = "none";
 		title.innerHTML = "updates";
 	} else if (this.id == "nav_flights") {
 		section_news.style.display = "none";
-		section_flights.style.display = "flex";;
+		section_flights.style.display = "flex";
+		section_map.style.display = "none";
 		title.innerHTML = "flights";
-	} else {
-		console.log("333");
+	} else if (this.id == "nav_map") {
+		section_news.style.display = "none";
+		section_flights.style.display = "none";
+		section_map.style.display = "inline";
+		section_map.style.height = "250px";
+		title.innerHTML = "live location";
 	}
 }
 
@@ -52,11 +56,12 @@ if ("serviceWorker" in navigator) {
 if ("geolocation" in navigator) {
 	navigator.geolocation.watchPosition((position) => {
 		console.log(position.coords.latitude, position.coords.longitude);
-	});
-}
 
-if ("BarcodeDetector" in window ) {
-	console.log('Barcode Detector supported!');
-} else {
-	console.log('not supported');
+		var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
+
+		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
+	});
 }

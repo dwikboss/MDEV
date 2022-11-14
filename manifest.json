@@ -2,7 +2,7 @@
 	"short_name": "Spirit",
 	"name": "Spirit Flights",
 	"start_url": ".",
-	"background_color": "#826aed",
+	"background_color": "#ffffff",
 	"display": "standalone",
 	"scope": ".",
 	"theme_color": "#826aed",
