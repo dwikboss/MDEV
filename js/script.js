@@ -41,9 +41,9 @@ function handleNav() {
 	} else if (this.id == "nav_map") {
 		section_news.style.display = "none";
 		section_flights.style.display = "none";
-		section_map.style.display = "inline";
+		section_map.style.display = "flex";
 		section_map.style.height = "250px";
-		title.innerHTML = "live location";
+		title.innerHTML = "home";
 	}
 }
 
@@ -55,13 +55,46 @@ if ("serviceWorker" in navigator) {
 	});
 }
 
+
+let world_city = document.getElementById("city");
+let world_degrees = document.getElementById("degrees");
+let world_description = document.getElementById("description");
+let world_tempMin = document.getElementById("temp_min");
+let world_tempMax = document.getElementById("temp_max");
+
 if ("geolocation" in navigator) {
 	navigator.geolocation.getCurrentPosition((position) => {
 		let lat = position.coords.latitude;
 		let long = position.coords.longitude;
 
-		fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}`)
+		fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${apikey}`)
 		.then(response => response.json())
-		.then(data => console.log(data));
+		.then(data => {
+			let cityValue = data['name'];
+			let countryValue = data['sys']['country'];
+			let degrees = data['main']['temp'];
+			let description = data['weather'][0]['description'];
+			let tempMin = data['main']['temp_min'];
+			let tempMax = data['main']['temp_max'];
+
+			world_city.innerHTML = cityValue + ", " + countryValue;
+			world_degrees.innerHTML = degrees + "°";
+			world_description.innerHTML = description;
+			world_tempMin.innerHTML = tempMin + "°";;
+			world_tempMax.innerHTML = tempMax + "°";;
+		});
 	});
+}
+
+let date = new Date();
+let hour = date.getHours();
+
+let tod = document.getElementById("time-of-day");
+
+if (hour < 12) {
+	tod.innerText = 'good morning,';
+} else if (hour < 18) {
+	tod.innerText = 'good afternoon,';
+} else {
+	tod.innerText = 'good evening,';
 }

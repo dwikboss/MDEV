@@ -257,6 +257,50 @@ header {
     height: 250px;
 }
 
+.map-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#time-of-day {
+    margin-top: 25px;
+    font-size: 2.6rem;
+    font-family: 'Poppins-Light';
+}
+
+.world-title {
+    font-size: 1.4rem;
+    font-family: 'Poppins-Regular';
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.forecast {
+    margin-top: 25px;
+}
+
+.forecast p {
+    font-size: 1.4rem;
+    font-family: 'Poppins-Regular';  
+}
+
+.forecast-card {
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#city {
+    font-size: 1.8rem;
+    font-family: 'Poppins-SemiBold';
+}
+
 /* news */
 
 .news {

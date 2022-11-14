@@ -21,28 +21,28 @@
     <header>
         <img id="spirit-logo" src="img/spirit-logo.png" alt="spirit-logo">
         <div id="title-inner">
-            <h1 id="title">updates</h1>
+            <h1 id="title">home</h1>
         </div>
     </header>
     
     <main>
         <div class="container main-content">
-            <div id="section_news" class="news-content" style="display: flex;">
-                <article class="news">
-                    <p class="news__date">07/11/2022</p>
-                    <h2 class="news__title">EHBO locaties aangepast</h2>
-                    <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
-                </article>
-                <article class="news">
-                    <p class="news__date">07/11/2022</p>
-                    <h2 class="news__title">EHBO locaties aangepast</h2>
-                    <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
-                </article>
-                <article class="news">
-                    <p class="news__date">07/11/2022</p>
-                    <h2 class="news__title">EHBO locaties aangepast</h2>
-                    <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
-                </article>
+            <div id="section_map" class="map-content" style="display: flex;">
+                <div class="greeting">
+                    <p id="time-of-day"></p>
+                    <p class="world-title">you are now located in</p>
+                    <p id="city"></p>
+                </div>
+                <div class="forecast">
+                    <p>today's weather</p>
+                    <div class="forecast-card">
+                        <p id="degrees"></p>
+                        <p id="temp_min"></p>
+                        <p id="temp_max"></p>
+                        <p id="description"></p>
+                    </div>
+                </div>
+                <!-- <div id="map"></div> -->
             </div>
 
             <div id="section_flights" class="flights-content" style="display: none;">
@@ -231,9 +231,22 @@
                 </div>
             </div>
 
-            <div id="section_map" class="map-content" style="display: none;">
-                <p>Hallo, U bevindt zich in</p>
-                <div id="map"></div>
+            <div id="section_news" class="news-content" style="display: none;">
+                <article class="news">
+                    <p class="news__date">07/11/2022</p>
+                    <h2 class="news__title">EHBO locaties aangepast</h2>
+                    <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
+                </article>
+                <article class="news">
+                    <p class="news__date">07/11/2022</p>
+                    <h2 class="news__title">EHBO locaties aangepast</h2>
+                    <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
+                </article>
+                <article class="news">
+                    <p class="news__date">07/11/2022</p>
+                    <h2 class="news__title">EHBO locaties aangepast</h2>
+                    <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
+                </article>
             </div>
         </div>
     </main>
@@ -241,9 +254,9 @@
     <div class="nav-section">
         <nav>
             <div class="nav-inner">
-                <i id="nav_news" class="bi bi-lightbulb-fill"></i>
-                <i id="nav_flights" class="bi bi-airplane-fill"></i>
                 <i id="nav_map" class="bi bi-geo-fill"></i>
+                <i id="nav_flights" class="bi bi-airplane-fill"></i>
+                <i id="nav_news" class="bi bi-lightbulb-fill"></i>
             </div>
         </nav>
     </div>
