@@ -61,6 +61,7 @@ let world_degrees = document.getElementById("degrees");
 let world_description = document.getElementById("description");
 let world_tempMin = document.getElementById("temp_min");
 let world_tempMax = document.getElementById("temp_max");
+let big_degrees = document.getElementById("big-degrees");
 
 if ("geolocation" in navigator) {
 	navigator.geolocation.getCurrentPosition((position) => {
@@ -78,10 +79,11 @@ if ("geolocation" in navigator) {
 			let tempMax = data['main']['temp_max'];
 
 			world_city.innerHTML = cityValue + ", " + countryValue;
-			world_degrees.innerHTML = degrees + "°";
+			world_degrees.innerHTML = Math.round(degrees) + "°";
+			big_degrees.innerHTML = Math.round(degrees) + "°";
 			world_description.innerHTML = description;
-			world_tempMin.innerHTML = tempMin + "°";;
-			world_tempMax.innerHTML = tempMax + "°";;
+			world_tempMin.innerHTML = Math.round(tempMin) + "°";
+			world_tempMax.innerHTML = Math.round(tempMax) + "°";
 		});
 	});
 }

@@ -251,7 +251,7 @@ header {
     gap: 10px;
 }
 
-/* map */
+/* home */
 #map { 
     margin-top: 25px;
     height: 250px;
@@ -282,9 +282,10 @@ header {
 
 .forecast {
     margin-top: 25px;
+    position: relative;
 }
 
-.forecast p {
+.forecast-text {
     font-size: 1.4rem;
     font-family: 'Poppins-Regular';  
 }
@@ -301,8 +302,58 @@ header {
     font-family: 'Poppins-SemiBold';
 }
 
-/* news */
+#degrees-back {
+    font-size: 26rem;
+    font-family: 'Poppins-SemiBold';
+    position: fixed;
+    right: -30px;
+    top: 120px;
+    color: var(--primary-purple);
+    opacity: 0.2;
+}
 
+.weather-temp {
+    font-family: 'Poppins-SemiBold';
+}
+
+.big-temp {
+    position: absolute;
+    font-size: 20rem;
+    font-family: 'Poppins-SemiBold';
+    color: var(--primary-purple);
+    opacity: 0.2;
+    right: -10px;
+    top: -110px;
+}
+
+.next-flight {
+    margin-top: 45px;
+    font-size: 2rem;
+    font-family: 'Poppins-SemiBold';
+}
+
+.summary .date {
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+.summary .time {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.summary .card-right {
+    gap: 0;
+    align-items: self-end;
+}
+
+.summary .line {
+    height: 16px;
+    top: 47px;
+    left: 40px;
+}
+
+/* news */
 .news {
     display: flex;
     flex-direction: column;
