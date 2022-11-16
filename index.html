@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Spirit Flights</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sprit Flights">
     <meta name="keywords" content="HTML,CSS,JavaScript,PWA,App Shell,Manifest,Serviceworker">
     <meta name="theme-color" content="#826aed">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="icon/icon-192.png">
     <script src="js/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -37,7 +35,7 @@
                     <p class="forecast-text">it's <span class="weather-temp" id="degrees"></span> with lows of <span class="weather-temp" id="temp_min"></span>, highs of <span class="weather-temp" id="temp_max"></span> and a reading of "<span class="weather-temp" id="description"></span>"</p>
                     <span class="big-temp" id="big-degrees"></span>
                     <p class="next-flight">your next flight</p>
-                    <div id="card_1" class="card summary">
+                    <div class="card summary">
                         <div class="border-left"></div>
                         <div class="card-content-wrapper">
                             <div class="card-content">
@@ -316,19 +314,19 @@
 
             <div id="section_news" class="news-content" style="display: none;">
                 <article id="news_1" class="news">
-                    <i id="share_1" class="bi bi-share-fill share_btn"></i>
+                    <i class="bi bi-share-fill share_btn"></i>
                     <p class="news__date">07/11/2022</p>
                     <h2 class="news__title">Geen vluchten naar Tenerife</h2>
                     <p class="news__excerpt">Vandaag worden alle vluchten naar Tenerife geannuleerd wegens personeelstekort.</p>
                 </article>
                 <article id="news_2" class="news">
-                    <i id="share_1" class="bi bi-share-fill share_btn"></i>
+                    <i class="bi bi-share-fill share_btn"></i>
                     <p class="news__date">07/11/2022</p>
                     <h2 class="news__title">EHBO locaties aangepast</h2>
                     <p class="news__excerpt">Op luchthaven Schiphol zijn enkele EHBO locaties aangepast. Bekijk de website van Schiphol voor actuele informatie.</p>
                 </article>
                 <article id="news_3" class="news">
-                    <i id="share_1" class="bi bi-share-fill share_btn"></i>
+                    <i class="bi bi-share-fill share_btn"></i>
                     <p class="news__date">07/11/2022</p>
                     <h2 class="news__title">Nieuwe Vegan opties</h2>
                     <p class="news__excerpt">Op vluchten van Spirit zijn nieuwe Vegan menu items toegevoegd! Bekijk onze website voor de menukaart.</p>
@@ -352,14 +350,14 @@
             </div>
         </nav>
     </div>
+    <script>
+        $(".card").click(function() {
+            $id = $(this).attr("id");
+            $content = $id + "_reveal";
+            $content_id = "#" + $content;
+    
+            $($content_id).slideToggle("500");
+        });
+    </script>
 </body>
-<script>
-    $(".card").click(function() {
-        $id = $(this).attr("id");
-        $content = $id + "_reveal";
-        $content_id = "#" + $content;
-
-        $($content_id).slideToggle("500");
-    });
-</script>
 </html>

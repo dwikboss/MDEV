@@ -13,6 +13,8 @@ let section_news = document.getElementById("section_news");
 let section_flights = document.getElementById("section_flights");
 let section_map = document.getElementById("section_map");
 
+let apikey = "8d8172502a2569a7360a64e94889071f";
+
 const shareButtons = document.querySelectorAll(".share_btn");
 
 for (var i = 0; i < shareButtons.length; i++) {
@@ -37,7 +39,6 @@ async function handleShare(data) {
 	}
 }
 
-let apikey = "8d8172502a2569a7360a64e94889071f";
 
 nav_news.addEventListener("click", handleNav);
 nav_flights.addEventListener("click", handleNav);
