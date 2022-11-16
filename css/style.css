@@ -115,10 +115,11 @@ header {
     background-color: white;
     display: flex;
     gap: 25px;
-    margin-top: 25px;
+    margin-top: 15px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+}
 }
 
 .card-content-wrapper {
@@ -151,7 +152,7 @@ header {
 }
 
 .price {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-family: 'Poppins-Regular';
 }
 
@@ -160,7 +161,7 @@ header {
     font-family: 'Poppins-Regular';
     color: black;
     opacity: 50%;
-    margin-top: 34px;
+    margin-top: 27px;
 }
 
 .time {
@@ -171,7 +172,7 @@ header {
 
 .depart, .arrive {
     font-family: 'Poppins-Medium';
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .airport {
@@ -207,6 +208,10 @@ header {
     flex-direction: row;
     gap: 35px;
     margin-bottom: 2em;
+}
+
+#card_4 {
+    margin-bottom: 110px;
 }
 
 .btn-share {
