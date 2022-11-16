@@ -13,19 +13,35 @@ let section_news = document.getElementById("section_news");
 let section_flights = document.getElementById("section_flights");
 let section_map = document.getElementById("section_map");
 
+const shareButtons = document.querySelectorAll(".share_btn");
+
+for (var i = 0; i < shareButtons.length; i++) {
+    shareButtons[i].addEventListener("click", function() {
+		let newsTitle = document.getElementById(this.parentElement.id).getElementsByTagName("h2");
+		let newsContent = document.getElementById(this.parentElement.id).getElementsByClassName("news__excerpt");
+
+		const shareData = {
+			title: newsTitle[0].innerText,
+			text: newsContent[0].innerText,
+		}
+
+		handleShare(shareData);
+    });
+}
+
+async function handleShare(data) {
+	try {
+		await navigator.share(data);
+	} catch (err) {
+		console.log(err);
+	}
+}
+
 let apikey = "8d8172502a2569a7360a64e94889071f";
 
 nav_news.addEventListener("click", handleNav);
 nav_flights.addEventListener("click", handleNav);
 nav_map.addEventListener("click", handleNav);
-
-document.querySelectorAll(".btn-share").forEach(btn_share => 
-	btn_share.addEventListener("click", handleShare)
-)
-
-function handleShare() {
-	console.log(this.id);
-}
 
 function handleNav() {
 	if (this.id == "nav_news") {
@@ -33,17 +49,29 @@ function handleNav() {
 		section_flights.style.display = "none";
 		section_map.style.display = "none";
 		title.innerHTML = "updates";
+
+		nav_news.classList.add("active");
+		nav_flights.classList.remove("active");
+		nav_map.classList.remove("active");
 	} else if (this.id == "nav_flights") {
 		section_news.style.display = "none";
 		section_flights.style.display = "flex";
 		section_map.style.display = "none";
 		title.innerHTML = "flights";
+		
+		nav_news.classList.remove("active");
+		nav_flights.classList.add("active");
+		nav_map.classList.remove("active");
 	} else if (this.id == "nav_map") {
 		section_news.style.display = "none";
 		section_flights.style.display = "none";
 		section_map.style.display = "flex";
 		section_map.style.height = "250px";
 		title.innerHTML = "home";
+
+		nav_news.classList.remove("active");
+		nav_flights.classList.remove("active");
+		nav_map.classList.add("active");
 	}
 }
 

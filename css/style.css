@@ -120,7 +120,7 @@ header {
     border-radius: 20px;
     overflow: hidden;
 }
-}
+
 
 .card-content-wrapper {
     display: flex;
@@ -142,6 +142,7 @@ header {
     flex-direction: column;
     gap: 20px;
     position: relative;
+    padding-right: 2em;
 }
 
 .border-left {
@@ -152,7 +153,7 @@ header {
 }
 
 .price {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-family: 'Poppins-Regular';
 }
 
@@ -172,7 +173,7 @@ header {
 
 .depart, .arrive {
     font-family: 'Poppins-Medium';
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .airport {
@@ -211,7 +212,7 @@ header {
 }
 
 #card_4 {
-    margin-bottom: 110px;
+    margin-bottom: 125px;
 }
 
 .btn-share {
@@ -343,7 +344,7 @@ header {
 }
 
 .summary .time {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-top: 0;
 }
 
@@ -368,6 +369,14 @@ header {
     padding: 1.2em;
     font-size: 1.6rem;
     border-radius: 20px;
+    position: relative;
+}
+
+.news i {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 2rem;
 }
 
 .news-content {
@@ -411,8 +420,14 @@ header {
 }
 
 .nav-inner i {
-    color: white;
+    color: black;
     font-size: 2rem;
+    opacity: 0.5;
+}
+
+.active {
+    color: white !important;
+    opacity: 1 !important;
 }
 
 /* TABLET - (Styling exceptions for tablet and larger) */
