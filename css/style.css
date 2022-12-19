@@ -287,13 +287,13 @@ header {
 }
 
 .forecast {
-    margin-top: 25px;
     position: relative;
 }
 
 .forecast-text {
     font-size: 1.4rem;
-    font-family: 'Poppins-Regular';  
+    font-family: 'Poppins-Regular';
+    margin-top: 25px;
 }
 
 .forecast-card {
@@ -329,7 +329,7 @@ header {
     color: var(--primary-purple);
     opacity: 0.2;
     right: -10px;
-    top: -110px;
+    top: 180px;
 }
 
 .next-flight {
@@ -436,4 +436,65 @@ header {
 
 /* DESKTOP - (Styling exceptions for desktop and larger) */
 @media screen and (min-width: 1200px){ 
+    #section_map {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #time-of-day {
+        font-size: 3.2rem;
+    }
+
+    .world-title {
+        font-size: 2rem;
+    }
+
+    #city {
+        font-size: 2.4rem;
+    }
+
+    .forecast, .greeting {
+        flex-grow: .25;
+    }
+    
+    .big-temp {
+        top: 250px;
+        font-size: 36rem;
+        right: unset;
+    }
+
+    .forecast-text {
+        font-size: 1.8rem;
+    }
+
+    .desktop .card {
+        gap: 35px;
+    }
+
+    .desktop .line {
+        height: 25px;
+        top: 47px;
+        left: 50px;
+    }
+
+    .desktop .depart-section, .desktop .arrive-section {
+        gap: 30px;
+    }
+
+    .desktop .card-content-wrapper, .desktop .card-right {
+        flex-grow: 1;
+    }
+
+    .desktop .card-right {
+        padding-right: 3em;
+    }
+
+    .desktop .depart, .desktop .arrive {
+        font-family: 'Poppins-Medium';
+        font-size: 2.2rem;
+    }
+
+    .desktop .airport {
+        font-size: 1.2rem;
+    }
 }
