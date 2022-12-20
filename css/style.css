@@ -328,11 +328,22 @@ header {
     font-family: 'Poppins-SemiBold';
     color: var(--primary-purple);
     opacity: 0.2;
-    right: -10px;
+    right: 25px;
     top: 180px;
 }
 
 .next-flight {
+    margin-top: 45px;
+    font-size: 2rem;
+    font-family: 'Poppins-SemiBold';
+}
+
+.forecast .news {
+    margin-top: 15px;
+    margin-bottom: 125px;
+}
+
+.latest-news {
     margin-top: 45px;
     font-size: 2rem;
     font-family: 'Poppins-SemiBold';
@@ -405,7 +416,6 @@ header {
 .nav-section {
     position: fixed;
     bottom: 0px;
-    position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -429,6 +439,14 @@ header {
     color: white !important;
     opacity: 1 !important;
 }
+
+#card_8 {
+    margin-bottom: 125px;
+}
+
+/* * {
+    outline: 1px solid #f00 !important;
+} */
 
 /* TABLET - (Styling exceptions for tablet and larger) */
 @media screen and (min-width: 768px) {
@@ -454,7 +472,7 @@ header {
     }
 
     .forecast, .greeting {
-        flex-grow: .25;
+        flex-grow: 0.25;
     }
     
     .big-temp {
@@ -496,5 +514,59 @@ header {
 
     .desktop .airport {
         font-size: 1.2rem;
+    }
+
+    .nav-section {
+        position: fixed;
+    }
+
+    .nav-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        padding: 5.4em 2.2em 5.4em 2.2em;
+    }
+
+    .nav-inner i {
+        font-size: 3.2rem;
+    }
+
+    .nav-section {
+        width: unset;
+        right: unset;
+        transform: unset;
+        margin-right: 25px;
+        right: 100px;
+        top: 50px;
+        left: unset;
+    }
+
+    .desktop .summary .time {
+        font-size: 3rem;
+    }
+
+    .desktop .news__date {
+        font-size: 1.6rem;
+    }
+
+    .desktop .news__excerpt {
+        font-size: 1.6rem;
+    }
+
+    .desktop .card, .desktop .news {
+        max-width: 500px;
+    }
+
+    .flights-content {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .news-content {
+        flex-direction: row;
+    }
+
+    .news-content .news {
+        width: 20%;
     }
 }

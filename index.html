@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="icon/icon-192.png">
-    <link rel="icon" type="image/x-icon" href="icon/icon-96.png">
+    <link rel="icon" type="image/x-icon" href="icon/icon-192.png">
     <script src="js/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
@@ -64,6 +64,12 @@
                             </div>
                         </div>
                     </div>
+                    <p class="latest-news">latest update</p>
+                    <article class="news">
+                        <p class="news__date">07/11/2022</p>
+                        <h2 class="news__title">EHBO locaties aangepast</h2>
+                        <p class="news__excerpt">Verschilende EHBO locaties op het festivalterrein zijn aangepast vanwege onverwachte drukte om...</p>
+                    </article>
                     <!-- <div class="forecast-card">
                     </div> -->
                 </div>
@@ -71,241 +77,485 @@
             </div>
 
             <div id="section_flights" class="flights-content" style="display: none;">
-                <div id="card_1" class="card">
-                    <div class="border-left"></div>
-                    <div class="card-content-wrapper">
-                        <div class="card-content">
-                            <div class="card-left">
-                                <p class="price">€960</p>
-                                <p class="date">today</p>
-                                <p class="time">17:24</p>
-                            </div>
-                            <div class="card-right">
-                                <div class="depart-section">
-                                    <span class="dot"></span>
-                                    <div class="depart-section-info">
-                                        <p class="depart">Amsterdam, NL</p>
-                                        <p class="airport">Schiphol</p>
+                <div class="flights-row">
+                    <div id="card_1" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€960</p>
+                                    <p class="date">today</p>
+                                    <p class="time">17:24</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Amsterdam, NL</p>
+                                            <p class="airport">Schiphol</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Los Angeles, USA</p>
+                                            <p class="airport">Los Angeles International Airport</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="line"></span>
-                                <div class="arrive-section">
-                                    <span class="dot"></span>
-                                    <div class="arrive-section-info">
-                                        <p class="arrive">Los Angeles, USA</p>
-                                        <p class="airport">Los Angeles International Airport</p>
+                            </div>
+                            <div id="card_1_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR015</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">10 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">16:00</p>
+                                    </div>
+                                </div>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">77A</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">C1</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="card_1_reveal" class="card-hidden" style="display: none;">
-                            <div class="hidden left">
-                                <div class="boarding-pass name">
-                                    <p class="label">name</p>
-                                    <p class="boarding-info">Dwiky van Bosstraten<p>
+                    </div>
+                    <div id="card_2" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€175</p>
+                                    <p class="date">18 november</p>
+                                    <p class="time">12:05</p>
                                 </div>
-                                <div class="boarding-pass flight-nr">
-                                    <p class="label">flight</p>
-                                    <p class="boarding-info">SPR015</p>
-                                </div>
-                                <div class="boarding-pass b-date">
-                                    <p class="label">date</p>
-                                    <p class="boarding-info">10 NOV 2022</p>
-                                </div>
-                                <div class="boarding-pass boarding">
-                                    <p class="label">boarding time</p>
-                                    <p class="boarding-info">16:00</p>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Eindhoven, NL</p>
+                                            <p class="airport">Eindhoven Airport</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Copenhagen, DK</p>
+                                            <p class="airport">Københavns Lufthavne Kastrup</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hidden right">
-                                <div class="boarding-pass seat">
-                                    <p class="label">seat</p>
-                                    <p class="boarding-info big">77A</p>
+        
+                            <div id="card_2_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR115</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">18 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">11:00</p>
+                                    </div>
                                 </div>
-                                <div class="boarding-pass gate">
-                                    <p class="label">gate</p>
-                                    <p class="boarding-info big">C1</p>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">25B</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">A2</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="card_2" class="card">
-                    <div class="border-left"></div>
-                    <div class="card-content-wrapper">
-                        <div class="card-content">
-                            <div class="card-left">
-                                <p class="price">€175</p>
-                                <p class="date">18 november</p>
-                                <p class="time">12:05</p>
-                            </div>
-                            <div class="card-right">
-                                <div class="depart-section">
-                                    <span class="dot"></span>
-                                    <div class="depart-section-info">
-                                        <p class="depart">Eindhoven, NL</p>
-                                        <p class="airport">Eindhoven Airport</p>
+                <div class="flights-row">
+                    <div id="card_5" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€960</p>
+                                    <p class="date">today</p>
+                                    <p class="time">17:24</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Amsterdam, NL</p>
+                                            <p class="airport">Schiphol</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Los Angeles, USA</p>
+                                            <p class="airport">Los Angeles International Airport</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="line"></span>
-                                <div class="arrive-section">
-                                    <span class="dot"></span>
-                                    <div class="arrive-section-info">
-                                        <p class="arrive">Copenhagen, DK</p>
-                                        <p class="airport">Københavns Lufthavne Kastrup</p>
+                            </div>
+                            <div id="card_5_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR015</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">10 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">16:00</p>
+                                    </div>
+                                </div>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">77A</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">C1</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-    
-                        <div id="card_2_reveal" class="card-hidden" style="display: none;">
-                            <div class="hidden left">
-                                <div class="boarding-pass name">
-                                    <p class="label">name</p>
-                                    <p class="boarding-info">Dwiky van Bosstraten<p>
+                    </div>
+                    <div id="card_6" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€175</p>
+                                    <p class="date">18 november</p>
+                                    <p class="time">12:05</p>
                                 </div>
-                                <div class="boarding-pass flight-nr">
-                                    <p class="label">flight</p>
-                                    <p class="boarding-info">SPR115</p>
-                                </div>
-                                <div class="boarding-pass b-date">
-                                    <p class="label">date</p>
-                                    <p class="boarding-info">18 NOV 2022</p>
-                                </div>
-                                <div class="boarding-pass boarding">
-                                    <p class="label">boarding time</p>
-                                    <p class="boarding-info">11:00</p>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Eindhoven, NL</p>
+                                            <p class="airport">Eindhoven Airport</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Copenhagen, DK</p>
+                                            <p class="airport">Københavns Lufthavne Kastrup</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hidden right">
-                                <div class="boarding-pass seat">
-                                    <p class="label">seat</p>
-                                    <p class="boarding-info big">25B</p>
+        
+                            <div id="card_6_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR115</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">18 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">11:00</p>
+                                    </div>
                                 </div>
-                                <div class="boarding-pass gate">
-                                    <p class="label">gate</p>
-                                    <p class="boarding-info big">A2</p>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">25B</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">A2</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="card_3" class="card">
-                    <div class="border-left"></div>
-                    <div class="card-content-wrapper">
-                        <div class="card-content">
-                            <div class="card-left">
-                                <p class="price">€240</p>
-                                <p class="date">25 november</p>
-                                <p class="time">09:22</p>
-                            </div>
-                            <div class="card-right">
-                                <div class="depart-section">
-                                    <span class="dot"></span>
-                                    <div class="depart-section-info">
-                                        <p class="depart">Eindhoven, NL</p>
-                                        <p class="airport">Eindhoven Airport</p>
+                <div class="flights-row">
+                    <div id="card_7" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€960</p>
+                                    <p class="date">today</p>
+                                    <p class="time">17:24</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Amsterdam, NL</p>
+                                            <p class="airport">Schiphol</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Los Angeles, USA</p>
+                                            <p class="airport">Los Angeles International Airport</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="line"></span>
-                                <div class="arrive-section">
-                                    <span class="dot"></span>
-                                    <div class="arrive-section-info">
-                                        <p class="arrive">Rome, IT</p>
-                                        <p class="airport">Roma-Fiumicino</p>
+                            </div>
+                            <div id="card_7_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR015</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">10 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">16:00</p>
+                                    </div>
+                                </div>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">77A</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">C1</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="card_3_reveal" class="card-hidden" style="display: none;">
-                            <div class="hidden left">
-                                <div class="boarding-pass name">
-                                    <p class="label">name</p>
-                                    <p class="boarding-info">Dwiky van Bosstraten<p>
+                    </div>
+                    <div id="card_8" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€175</p>
+                                    <p class="date">18 november</p>
+                                    <p class="time">12:05</p>
                                 </div>
-                                <div class="boarding-pass flight-nr">
-                                    <p class="label">flight</p>
-                                    <p class="boarding-info">SPR208</p>
-                                </div>
-                                <div class="boarding-pass b-date">
-                                    <p class="label">date</p>
-                                    <p class="boarding-info">25 NOV 2022</p>
-                                </div>
-                                <div class="boarding-pass boarding">
-                                    <p class="label">boarding time</p>
-                                    <p class="boarding-info">08:00</p>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Eindhoven, NL</p>
+                                            <p class="airport">Eindhoven Airport</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Copenhagen, DK</p>
+                                            <p class="airport">Københavns Lufthavne Kastrup</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hidden right">
-                                <div class="boarding-pass seat">
-                                    <p class="label">seat</p>
-                                    <p class="boarding-info big">06A</p>
+        
+                            <div id="card_8_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR115</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">18 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">11:00</p>
+                                    </div>
                                 </div>
-                                <div class="boarding-pass gate">
-                                    <p class="label">gate</p>
-                                    <p class="boarding-info big">B2</p>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">25B</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">A2</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="card_4" class="card">
-                    <div class="border-left"></div>
-                    <div class="card-content-wrapper">
-                        <div class="card-content">
-                            <div class="card-left">
-                                <p class="price">€850</p>
-                                <p class="date">2 december</p>
-                                <p class="time">11:05</p>
-                            </div>
-                            <div class="card-right">
-                                <div class="depart-section">
-                                    <span class="dot"></span>
-                                    <div class="depart-section-info">
-                                        <p class="depart">Amsterdam, NL</p>
-                                        <p class="airport">Schiphol Airport</p>
+                <div class="flights-row">
+                    <div id="card_9" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€960</p>
+                                    <p class="date">today</p>
+                                    <p class="time">17:24</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Amsterdam, NL</p>
+                                            <p class="airport">Schiphol</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Los Angeles, USA</p>
+                                            <p class="airport">Los Angeles International Airport</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="line"></span>
-                                <div class="arrive-section">
-                                    <span class="dot"></span>
-                                    <div class="arrive-section-info">
-                                        <p class="arrive">Seoul, KOR</p>
-                                        <p class="airport">Incheon International Airport</p>
+                            </div>
+                            <div id="card_9_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR015</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">10 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">16:00</p>
+                                    </div>
+                                </div>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">77A</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">C1</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="card_4_reveal" class="card-hidden" style="display: none;">
-                            <div class="hidden left">
-                                <div class="boarding-pass name">
-                                    <p class="label">name</p>
-                                    <p class="boarding-info">Dwiky van Bosstraten<p>
+                    </div>
+                    <div id="card_10" class="card">
+                        <div class="border-left"></div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <div class="card-left">
+                                    <p class="price">€175</p>
+                                    <p class="date">18 november</p>
+                                    <p class="time">12:05</p>
                                 </div>
-                                <div class="boarding-pass flight-nr">
-                                    <p class="label">flight</p>
-                                    <p class="boarding-info">SPR311</p>
-                                </div>
-                                <div class="boarding-pass b-date">
-                                    <p class="label">date</p>
-                                    <p class="boarding-info">2 DEC 2022</p>
-                                </div>
-                                <div class="boarding-pass boarding">
-                                    <p class="label">boarding time</p>
-                                    <p class="boarding-info">10:22</p>
+                                <div class="card-right">
+                                    <div class="depart-section">
+                                        <span class="dot"></span>
+                                        <div class="depart-section-info">
+                                            <p class="depart">Eindhoven, NL</p>
+                                            <p class="airport">Eindhoven Airport</p>
+                                        </div>
+                                    </div>
+                                    <span class="line"></span>
+                                    <div class="arrive-section">
+                                        <span class="dot"></span>
+                                        <div class="arrive-section-info">
+                                            <p class="arrive">Copenhagen, DK</p>
+                                            <p class="airport">Københavns Lufthavne Kastrup</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hidden right">
-                                <div class="boarding-pass seat">
-                                    <p class="label">seat</p>
-                                    <p class="boarding-info big">17B</p>
+        
+                            <div id="card_10_reveal" class="card-hidden" style="display: none;">
+                                <div class="hidden left">
+                                    <div class="boarding-pass name">
+                                        <p class="label">name</p>
+                                        <p class="boarding-info">Dwiky van Bosstraten<p>
+                                    </div>
+                                    <div class="boarding-pass flight-nr">
+                                        <p class="label">flight</p>
+                                        <p class="boarding-info">SPR115</p>
+                                    </div>
+                                    <div class="boarding-pass b-date">
+                                        <p class="label">date</p>
+                                        <p class="boarding-info">18 NOV 2022</p>
+                                    </div>
+                                    <div class="boarding-pass boarding">
+                                        <p class="label">boarding time</p>
+                                        <p class="boarding-info">11:00</p>
+                                    </div>
                                 </div>
-                                <div class="boarding-pass gate">
-                                    <p class="label">gate</p>
-                                    <p class="boarding-info big">F1</p>
+                                <div class="hidden right">
+                                    <div class="boarding-pass seat">
+                                        <p class="label">seat</p>
+                                        <p class="boarding-info big">25B</p>
+                                    </div>
+                                    <div class="boarding-pass gate">
+                                        <p class="label">gate</p>
+                                        <p class="boarding-info big">A2</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
